@@ -2,7 +2,7 @@ public class java1104 {
 
 	public static void main(String[] args) {
 
-		/* <형변환(Type Casting)>
+		// <형변환(Type Casting)>
 
 
 	//<묵시적 형변환>
