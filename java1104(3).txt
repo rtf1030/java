@@ -1,0 +1,79 @@
+public class java1104 {
+
+	public static void main(String[] args) {
+
+		/* <형변환(Type Casting)>
+
+
+	//<묵시적 형변환>
+
+
+	int a1 = 128;
+	byte a2 = 127;
+
+	System.out.println("변환 전 a1(int) : " + a1 + ", a2(byte) : " +a2);
+
+	a1=a2;
+	a1=(int)a2;
+
+	System.out.println("변환 후 a1(int) : " + a1 + ", a2(byte) : " + a2);
+
+
+
+	//<강제적 형변환>
+
+	int b1 = 128;
+	byte b2 = 127;
+
+	System.out.println("변환 전 b1(int) : " + b1 + ", b2(byte) : " + b2);
+
+	b2=(byte)b1;
+
+	System.out.println("변환 후 b1(int) : " + b1 + ", b2(byte) : " + b2);
+
+
+	//강제형변환에도 오버플로우가 발생하지 않는 경우
+        // => 작은 데어터타입에 저장 가능한 데이터 범위인 경우
+
+	int c1 = 10;
+	byte c2 = 0;
+
+	System.out.println("변환 전 c1(int) : " + c1 + ", c2(byte) : " + c2);
+
+	c2=(byte)c1;
+	System.out.println("변환 후 c1(int) : " + c1 + ", c2(byte) : " + c2);
+
+	
+	// 음수 표현 가능 여부에 따라 표현 범위가 달라질 수 있다.
+	// => byte,short타입과 char타입은 무조건 명시적 형변환이 필수이다.
+
+		byte b = 65;
+		short s = 97;
+		
+	// byte <-> char 변환
+       		// char ch1 = b; // 오류! 
+		char ch1 = (char)b;
+		System.out.println(ch1);
+
+
+		// b = ch1; // 오류!
+		b = (byte)ch1;
+		System.out.println(b);
+
+		
+	// short <-> char 변환
+		//char ch2 = s; // 오류!
+		char ch2 = (char)s;
+		System.out.println(ch2);
+
+
+	// char <-> short 변환 
+		//s = ch2; // 오류!
+		s = (short)ch2;
+		System.out.println(s);
+		
+
+
+
+}
+}
