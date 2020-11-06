@@ -35,7 +35,8 @@ public class java1106_03 {
 
 	   
 	   	//b = b / a
-	  	b /= a; 
+	  	b /= a;
+		System.out.println(b); 
 
 
 	   
