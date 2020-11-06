@@ -1,0 +1,94 @@
+public class java1106_2 {
+
+	public static void main(String[] args) {
+
+		/*
+		 * 산술 연산 시 자동 형변환(2)
+		 * - 산술 연산 전에 데이터 타입이 다르다면
+		 *   산술 연산을 수행하기 전 피연산자끼리의 데이터타입을 일치시킨 후 연산 수행
+		 * - 규칙 1. int 타입보다 작은 타입끼리의 연산은 모두 int 타입으로 변환 후 연산 수행
+		 *    ->결과 값이 무조건 int 타입이 됨		 
+		 *   ex2) char + int = (int)char + int = int
+		 * - 규칙 2. int 타입보다 큰 타입과의 연산은 큰 타입으로 변환 후 연산 수행
+		 *   ex) int + long = (long)int + long = long
+		 *   ex2) int + double = (double)int + double = double
+		 */
+		
+		char ch = 'A';
+//		char ch2 = ch + 2; // 오류! 
+		System.out.println(ch + 2); 
+
+
+
+		char ch2 = (char) (ch + 2); 
+		System.out.println(ch2); 
+
+		
+		int i = 100;
+		long l = 200;
+//		int i2 = i + l; // 
+
+
+		int i2 = (int)(i + l);
+		System.out.println(i2);
+		
+
+
+		float f = 3.14f;
+		System.out.println(l + f);
+//		long l2 = l + f; // 오류! long + float = float 이므로 long 타입 변수에 저장 불가!
+		long l2 = (long)(l + f);
+		
+
+
+
+		System.out.println(10 / 3); 
+		
+		
+		System.out.println(10 / 3.0); // int / double = double (실제 사용하는 방법)
+
+		
+
+		System.out.println(10 / 3f); 
+
+
+		
+		// 실수 연산의 경우 float, double 타입의 사용에 주의!
+
+		float f1 = 0.1f;
+		double d1 = 0.1;
+		System.out.println(f1 + d1); 
+		
+
+		System.out.println(f1 + (float)d1);
+
+		
+		// 리터럴끼리의 연산
+		byte b4 = 10 + 20; 
+//		byte b5 = 100 + 28; // 오류! 
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
