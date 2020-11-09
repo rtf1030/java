@@ -1,0 +1,73 @@
+public class Java_1109 {
+
+	public static void main(String[] args) {
+		/* (& Ampersand) (| Vertical bar) (^ Caret)
+		 * 논리연산자(&&, ||, !, ^)
+		 * - 두 피연산자 간의 논리적인 판별을 수행하는 연산자
+		 * - 피연산자는 모두 boolean 타입 데이터만 사용 가능하며,
+		 *   결과값도 boolean 타입으로 리턴된다.
+		 * 
+		 * < AND 연산자(& 또는 &&) - 논리곱 >
+		 * - 두 피연산자가 모두 true 일 경우에만 결과값이 true 이고,
+		 *   하나라도 false 일 경우 결과값이 false
+		 *   
+		 * < OR 연산자(| 또는 ||) - 논리합 >
+		 * - 두 피연산자 중 하나라도 true 일 경우 결과값이 true 이고,
+		 *   모두 false 일 경우에만 결과값이 false
+		 * 
+		 * < NOT 연산자(!) - 논리부정 >
+		 * - 단항 연산자로, 현재 값을 반대로 반전시킴
+		 * 
+		 * < XOR 연산자(^) - 배타적 논리합(배타적 OR) >
+		 * - 두 피연산자가 서로 다를 때 true, 같을 때 false
+		 */
+
+
+		
+		boolean a = false;
+		boolean b = true;
+		
+		// AND 연산자(&&)
+		System.out.println(a && a);
+		System.out.println(a && b);
+		System.out.println(b && a);
+		System.out.println(b && b);
+		
+		
+		
+		// OR 연산자(||)
+		System.out.println(a || a);
+		System.out.println(a || b);
+		System.out.println(b || a);
+		System.out.println(b || b);
+		
+		
+		
+		// NOT 연산자(!)
+		System.out.println(!a);
+		System.out.println(!b);
+		
+		
+		
+		// XOR 연산자(^)
+		System.out.println(a ^ a);
+		System.out.println(a ^ b);
+		System.out.println(b ^ a);
+		System.out.println(b ^ b);
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
