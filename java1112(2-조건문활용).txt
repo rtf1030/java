@@ -1,0 +1,120 @@
+public class Java1112 {
+	public static void main(String[] args) {
+		
+
+				// (1) if문을 활용하여 정수형 변수 num 에 대한 절대값 계산하여 출력
+				
+				int num = -5;
+				
+				
+				if(num < 0) { 			
+					System.out.println("num = " + num + " 이므로 양수로 변환!");
+					num = -num; // 음수 -> 양수 변환
+				}		
+				
+				System.out.println("변수 num = " + num);
+
+				
+				System.out.println("---------------------------------");
+
+
+
+
+				
+				// (2) if문을 사용하여 문자 ch 가 대문자일 때, 소문자로 변환하여 출력
+
+				char ch = 'G'; 
+				
+				if(ch >= 'A' && ch <= 'Z') { 
+					ch += 32;
+				}
+				
+				System.out.println("ch = " + ch); 
+
+
+
+
+				System.out.println("---------------------------------");
+
+
+
+
+
+				
+				
+				// (3) 정수형 변수 num 에 대한 양수, 음수 판별(0은 양수에 포함시킴)	
+
+				int num1 = 10; 	
+				if(num1 >= 0) {
+					System.out.println(num1 + " : 양수!");
+				} else {
+					System.out.println(num1 + " : 음수!");
+				}
+
+
+
+
+
+				
+				System.out.println("----------------------------------");
+
+				// (4) 정수형 변수 num 에 대한 홀수, 짝수 판별(0은 짝수에 포함시킴)
+				int num2=6;
+				if(num2 % 2 == 0) {
+					System.out.println(num2 + " : 짝수!");
+				} else {
+					System.out.println(num2 + " : 홀수!");
+				}
+
+
+
+
+				
+				System.out.println("----------------------------------");
+
+				// (5) 문자 ch 가 대문자이면 소문자로 변환 소문자이면 대문자로 변환
+						  
+				char ch2 = 'd';
+				
+				if(ch2 >= 'A' && ch2 <= 'Z') { 
+					ch2 += 32;
+					System.out.println("대문자이므로 소문자로 변환!");
+				} else { 
+					ch2 -= 32;
+					System.out.println("소문자이므로 대문자로 변환!");
+				}
+				
+				System.out.println("ch1 = " + ch2);
+
+
+				System.out.println("----------------------------------");
+				
+				
+				
+				// (6) 문자 ch 가 대문자일 경우 소문자로 변환, 소문자일 경우 대문자로 변환
+				//     아니면 "ch 는 영문자가 아닙니다!" 출력
+
+				
+				char ch3 = '-';
+				if(ch3 >= 'A' && ch3 <= 'Z') { 
+					ch3 += 32;
+					System.out.println("ch 는 대문자이므로 소문자로 변환!");
+				} else if(ch3 >= 'a' && ch3 <= 'z') { 
+					ch3 -= 32;
+					System.out.println("ch 는 소문자이므로 대문자로 변환!");
+				} else { 
+					System.out.println("ch 는 영문자가 아닙니다!");
+				}
+
+				
+				System.out.println("ch3 = " + ch3);
+				
+
+
+
+
+
+				
+			}
+
+		}
