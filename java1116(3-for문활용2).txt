@@ -1,0 +1,148 @@
+public class Java1116 {
+
+	public static void main(String[] args) {
+		/*
+		 * 중첩 for문을 활용한 시계 구현
+		 * => 0분 ~ 59분까지 1씩 증가할 동안 각 분마다 0초 ~ 59초까지 1씩 증가
+		 * 0분 0초
+		 * 0분 1초
+		 * 0분 2초
+		 * ...
+		 * 0분 59초
+		 * 1분 0초
+		 * 1분 1초
+		 * ...
+		 * 59분 58초
+		 * 59분 59초
+		 */
+
+
+		for(int min = 0; min <= 59; min++) {
+			System.out.println(min + "분");
+			
+			for(int sec = 0; sec <= 59; sec++) {
+				System.out.println(min + "분 " + sec + "초");
+			}
+			
+		}
+
+
+
+
+		
+		
+		
+	
+		// for문 내의 구성요소에 값을 리터럴(값)로만 지정하는 것이 아니라
+		// 변수를 사용하여 지정할 수도 있다!
+
+
+
+
+		int count = 10; // 외부에서 입력받은 값이라고 가정
+
+		// for문 내의 제어변수 i가 1 부터 입력받은 count 값까지 1씩 증가하면서 반복
+		// => 즉, 입력받은 count 값에 따라 반복 횟수가 달라질 수 있다!
+
+		for(int i = 1; i <= count; i++) {
+
+			System.out.println(i);
+
+		}
+		
+
+
+
+
+
+
+		/*
+		 * 1             i = 1 일 때 j = 1 ~ 1 까지
+		 * 1 2           i = 2 일 때 j = 1 ~ 2 까지
+		 * 1 2 3         i = 3 일 때 j = 1 ~ 3 까지
+		 * 1 2 3 4       i = 4 일 때 j = 1 ~ 4 까지
+		 * 1 2 3 4 5     i = 5 일 때 j = 1 ~ 5 까지
+		 */
+
+		// 바깥쪽 for문 i가 1 ~ 5 까지 반복
+		for(int i = 1; i <= 5; i++) { // 바깥쪽 for문
+			
+			// 안쪽 for문에서 j가 1 ~ 5 까지 반복
+			for(int j = 1; j <= i; j++) {
+				System.out.print("*");
+			}
+			
+			System.out.println();
+			
+		}
+
+
+
+
+
+		
+	
+		
+		/*
+		 * 1 2 3 4 5     i = 5 일 때 j = 1 ~ 5 까지
+		 * 1 2 3 4       i = 4 일 때 j = 1 ~ 4 까지
+		 * 1 2 3         i = 3 일 때 j = 1 ~ 3 까지
+		 * 1 2           i = 2 일 때 j = 1 ~ 2 까지
+		 * 1             i = 1 일 때 j = 1 ~ 1 까지
+		 * 
+		 * *****
+		 * ****
+		 * ***
+		 * **
+		 * *
+		 * 
+		 */
+		
+		for(int i = 5; i >= 1; i--) {
+			
+			for(int j = 1; j <= i; j++) {
+				
+				System.out.print(j + " ");
+				
+			}
+			
+			System.out.println();
+			
+		}
+
+
+
+
+		
+	
+		
+		for(int i = 1; i <= 5; i++) {
+			
+			for(int j = 1; j <= 6 - i; j++) {
+				
+				System.out.print(j + " ");
+				
+			}
+			
+			System.out.println();
+			
+		}
+		
+		
+
+
+		
+		for(int i = 1; i <= 5; i++) {
+			
+			for(int j = 5; j >= i; j--) {				
+			 System.out.print("*");
+				
+			}
+			
+			System.out.println();
+			
+		}
+}
+}
+		
+		
