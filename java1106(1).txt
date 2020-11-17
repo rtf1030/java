@@ -1,0 +1,41 @@
+public class java1106 {
+
+	public static void main(String[] args) {
+		/*
+		 * 산술 연산자(+,-,*,/,%)
+		 * - 일반 사칙연산과 동일하다.
+		 *    -> % 연산자 : 나머지 연산자이며, 나눗셈 결과의 나머지 계산한다.
+		*/
+		
+		System.out.println(20 + 2); 
+		System.out.println(20 - 2); 
+		System.out.println(20 * 2); 
+		System.out.println(20 / 2); // 몫만 계산된다.
+		System.out.println(20 % 2); // 나머지만 계산된다.
+
+
+
+		System.out.println("-------------------------------------------------");
+		
+		/*
+		 * 산술 연산 시 자동 형변환
+		 * - 산술 연산 전에 데이터 타입이 다르다면
+		 *   산술 연산을 수행하기 전 피연산자끼리의 데이터타입을 일치시킨 후 연산 수행
+
+		 * - 규칙 1. int 타입보다 작은 타입끼리의 연산은 모두 int 타입으로 변환 후 연산 수행
+		 * 			 => 따라서, 결과 값이 무조건 int 타입이 됨
+		 * 	 ex) byte + byte = (int)byte + (int)byte 로 변환되어 연산 수행 = 결과가 int 타입
+		 *       ex2) char + int = (int)char + int = int
+		 */
+		
+		
+		byte b1 = 10, b2 = 20, b3; //연산결과로 b3선언
+		System.out.println(b1 + b2);
+		
+//		b3= b1 + b2; //오류! 
+		b3 = (byte)(b1+b2); // 연산 결과에 형변환 연산자를 적용하여 byte타입으로 변환
+                System.out.println(b3);		
+
+	}
+
+}

@@ -1,0 +1,96 @@
+public class Java1116 {
+
+	public static void main(String[] args) {
+		/*
+		 * 구구단의 특정 단 출력
+		 * 
+		 *  < 2단 >
+		 * 2 * 1 = 2
+		 * 2 * 2 = 4
+		 * 2 * 3 = 6
+		 * 2 * 4 = 8
+		 * 2 * 5 = 10
+		 * 2 * 6 = 12
+		 * 2 * 7 = 14
+		 * 2 * 8 = 16
+		 * 2 * 9 = 18
+		 */
+		
+		
+		//Q1) 변수를 조합하여 구구단 출력
+		int dan = 2; // 출력할 단
+		int i = 1; // 곱해질 값
+		
+		System.out.println(" < " + dan + "단 >");
+		System.out.println(dan + " * " + i + " = " + (dan * i)); 
+		i++;
+		System.out.println(dan + " * " + i + " = " + (dan * i)); 
+		i++;
+		System.out.println(dan + " * " + i + " = " + (dan * i)); 
+		i++;
+		System.out.println(dan + " * " + i + " = " + (dan * i)); 
+		i++;
+		System.out.println(dan + " * " + i + " = " + (dan * i)); 
+		i++;
+		System.out.println(dan + " * " + i + " = " + (dan * i)); 
+		i++;
+		System.out.println(dan + " * " + i + " = " + (dan * i)); 
+		i++;
+		System.out.println(dan + " * " + i + " = " + (dan * i)); 
+		i++;
+		System.out.println(dan + " * " + i + " = " + (dan * i)); 
+		i++;
+
+		
+		
+		
+		// Q2) for문을 사용하여 구구단 1개 단 출력
+		dan = 5; 
+		System.out.println(" < " + dan + "단 >");
+		
+		for(i = 1; i <= 9; i++) {
+			System.out.println(dan + " * " + i + " = " + (dan * i)); 
+		}
+		
+	
+		// Q3) i가 1 ~ 10까지 1씩 증가
+		// 짝수의 합(evenTotal = 30), 홀수의 합(oddTotal = 25) 각각 누적
+
+		int evenTotal = 0, oddTotal = 0;
+		
+		for(int j = 1; j <= 10; j++) {
+			// 홀수, 짝수 각각 판별하여 합계 별도로 누적
+			if(j % 2 == 1) {
+				oddTotal += j;
+			} else {
+				evenTotal += j;
+			}
+		}
+		
+		System.out.println("1 ~ 10까지 짝수 합 : " + evenTotal);
+		System.out.println("1 ~ 10까지 홀수 합 : " + oddTotal);
+		
+		
+
+		
+		/* 
+		 * Q4) 간단 3, 6, 9 게임
+		 * - 정수 1 ~ 100 까지 1씩 증가하면서 반복
+		 * - 각 정수를 화면에 출력
+		 * - 단, 정수의 일의 자리가 3, 6, 9 중 하나일 경우 숫자 출력 대신 박수 "짝" 출력
+		 * ex) 1 2 짝(3) 4 5 짝(6) 7 8 짝(9) 10 11 12 ... 90 91 92 짝(93) ... 짝(99) 100
+		 */
+		
+		for(int s = 1; s <= 100; s++) {
+			int num = i % 10; // 일의 자리 추출(10으로 나눈 나머지 계산)
+			
+			if(num == 3 || num == 6 || num == 9) { // 일의 자리 숫자 3, 6, 9 판별
+				System.out.print("짝(" + s + ") "); // 박수
+			} else { // 일의 자리 숫자가 3, 6, 9 가 아닐 때
+				System.out.print(s + " "); // 숫자
+			}
+		
+
+}
+	}
+}

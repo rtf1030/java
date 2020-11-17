@@ -1,0 +1,48 @@
+
+public class Java1104 {
+
+	public static void main(String[] args) {
+		
+//              <String 타입>
+		
+//		String s = '1'; // 오류! 				
+		String s2 = ""; // 널스트링
+		
+		
+		s3 = "안녕하세요. \n 제 이름은 \t \"홍길동\"입니다.";
+		System.out.println(s3);
+		
+		
+		System.out.println("1" + "2"); // "12"
+		System.out.println(1 + "문자열");
+		System.out.println("문자열" + 1);
+		
+		
+		System.out.println(1 + 2 + "문자열"); // "3문자열"		
+		System.out.println("문자열" + 1 + 2); // "문자열12"
+
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
