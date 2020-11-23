@@ -1,0 +1,29 @@
+
+
+public class java1123 {
+	public static void main(String[] args) {
+		//2. 매개변수는 없고 리턴값은 있는 메서드 호출	
+		int Arrary[] = getArray(); 
+		for(int i=0;i<Arrary.length;i++) {
+			System.out.println(Arrary[i]);
+			
+			
+		//3. 매개변수만 있고 리턴값은 없는 메서드 호출
+			hello2(5);     //리턴값이 없으므로 단독 사용
+		}	
+		
+	}
+	
+	//2. 매개변수는 없고 리턴값은 가지고있는 메서드 정의
+	public static int[] getArray() {
+		int arr[] = {1,2,3,4,5};
+				
+		return arr;
+}
+	//3. 매개변수만 있고 리턴값은 없는 메서드 호출
+	public static void hello2(int count) {
+		for(int i=1; i<=count; i++) {
+		System.out.println("Hello, World!");
+		}
+}
+}
