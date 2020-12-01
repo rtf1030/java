@@ -1,0 +1,53 @@
+﻿public class Java1126_2 {
+
+	public static void main(String[] args) {
+		
+		
+	 Calculator cal = new Calculator();
+		cal.calc('+',10,20);
+		cal.calc('-',30,20,10);
+		cal.calc('*',2,3);
+		cal.calc('/',100,10);
+
+	
+	}
+
+}
+
+
+class Calculator{	
+	
+	public void calc(char opr,int num1,int num2){
+	 if(opr=='+'){
+		int sum = num1+num2;
+		System.out.println(num1 + "+" + num2 + "=" + sum);
+	}else if(opr=='-'){
+		int sum = num1-num2;
+		System.out.println(num1 + "-" + num2 + "=" + sum);
+	}else if(opr=='*'){
+ 		int sum = num1*num2;
+		System.out.println(num1 + "*" + num2 + "=" + sum);
+	}else if(opr=='/'){
+		int sum = num1/num2;
+		System.out.println(num1 + "/" + num2 + "=" + sum);
+	}
+	}
+
+
+
+	public void calc(char opr,int num1,int num2,int num3){
+	 if(opr=='+'){
+		int sum = num1+num2+num3;
+		System.out.println(num1 + "+" + num2 + "+" + num3 + "=" + sum);
+	}else if(opr=='-'){
+		int sum = num1-num2-num3;
+		System.out.println(num1 + "-" + num2 + "-" + num3 + "=" + sum);
+	}else if(opr=='*'){
+ 		int sum = num1*num2*num3;
+		System.out.println(num1 + "*" + num2 + "*" + num3 + "=" + sum);
+	}else if(opr=='/'){
+		int sum = num1/num2/num3;
+		System.out.println(num1 + "/" + num2 + "/" + num3 + "=" + sum);
+	}
+}
+	}

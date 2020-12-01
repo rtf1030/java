@@ -1,0 +1,50 @@
+﻿public class Test2 {
+
+	public static void main(String[] args) {
+		Car car = new Car();
+		
+		car.modelName = "SONATA";
+		car.carColor = "BLACK";
+		car.maxSpeed = 240;
+		car.speed = 0 ;
+		
+		car.showCarInfo();
+		
+		car.speedUp(100);
+		car.speedUp(100);
+		
+		car.speedDown(100);
+
+	}
+
+}
+
+class Car{
+	String modelName;
+	String carColor;
+	int maxSpeed;
+	int speed;
+	
+	public void showCarInfo() {
+		System.out.println("모델명 : " + modelName);
+		System.out.println("색상 : " + carColor);
+		System.out.println("최대 속력 : " + maxSpeed);
+	}
+	
+	public void speedUp(int s) {
+		speed+=s;
+		if(speed>maxSpeed) {
+		speed=maxSpeed;
+		System.out.println("최대 속력 도달!");
+		}
+		System.out.println("현재 속력 : " + speed + "km/h");
+	}
+	public void speedDown(int s) {
+		speed-=s;
+		if(speed<=0) {
+			speed=0;
+			System.out.println("차량 정지!");
+		}
+		System.out.println("현재 속력 : " + speed + "km/h");
+	}
+}

@@ -1,0 +1,21 @@
+﻿public class java1123 {
+
+	public static void main(String[] args) {
+		//4. 매개변수도 있고 리턴값도 있는 메서드 호출
+		String result = check(4);
+		System.out.println(result);
+		}		
+	
+	//4. 매개변수도 있고 리턴값도 있는 메서드 정의
+	public static String check(int num) {
+		String result ="";    //결과값을 저장할 변수
+		
+		if(num%2==0) {
+			result = "짝수";			
+		}else {
+			System.out.println("num은 홀수");
+			result = "홀수";
+		}
+		return result;
+	}
+}

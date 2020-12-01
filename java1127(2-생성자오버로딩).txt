@@ -1,0 +1,46 @@
+public class Java1127_2 {
+
+	public static void main(String[] args) {
+		/*
+		 * 생성자 오버로딩
+		 * - 메서드 오버로딩과 동일하게 파라미터가 다른 생성자를 여러번 정의하는 것
+		 */	
+	
+		OverloadingPerson op = new OverloadingPerson();
+		op.print();	
+		
+		OverloadingPerson op2 = new OverloadingPerson("이순신",44,false);
+		op2.print();
+		
+	}
+}
+
+class OverloadingPerson{
+	String name;
+	int age;
+	boolean isHungry;
+
+	//기본 생성자 정의 및 초기화
+	public OverloadingPerson(){	
+		name = "홍길동";
+		age = 20;
+		isHungry = true;
+	}
+
+
+	//생성자 오버로딩
+	public OverloadingPerson(String name, int age, boolean isHungry){
+		this.name = name;
+		this.age = age;
+		this.isHungry = isHungry;
+	}
+
+	//멤버변수 값을 출력하는 print()메서드 정의
+	public void print(){
+		System.out.println("이름 : " + name);
+		System.out.println("나이 : " + age);
+		System.out.println("배고픔 : " + isHungry);
+
+	}
+
+}
