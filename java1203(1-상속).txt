@@ -1,0 +1,127 @@
+
+public class Java1203_1 {
+
+	public static void main(String[] args) {
+		/*
+		 * 상속(Inheritance)
+		 * - 슈퍼클래스의 모든 멤버를 서브클래스에서 물려받아 선언없이 사용하는 것
+		 *   => 상속을 받은 서브클래스에서는 별도의 선언 및 정의 없이도
+		 *      슈퍼클래스가 가진 멤버변수나 메서드 등을 자신의 멤버처럼 사용 가능
+		 * - 슈퍼클래스(Super class) = 부모클래스(조상클래스) = 상위클래스
+		 *   서브클래스(Sub class) = 자식클래스(자손클래스) = 하위클래스 = 파생클래스
+		 * - 서브클래스 정의 시 서브클래스명 뒤에 extends 키워드를 사용하고
+		 *   extends 키워드 뒤에 슈퍼클래스의 이름을 명시함
+		 * - private 접근제한자가 적용된 멤버는 상속 대상에서 제외됨
+		 * - 생성자는 상속되지 않음
+		 * - 자바는 단일 상속만 지원하므로 동시에 2개 이상의 클래스를 상속받을 수 없음
+		 *   (class 서브클래스명 extends 슈퍼클래스1, 슈퍼클래스2 {} 형태로 상속 불가능)
+		 * - 클래스 정의 시 별도의 extends 키워드를 사용하지 않으면(상속 명시하지 않으면)
+		 *   자동으로 java.lang.Object 클래스를 상속받게 됨
+		 *   => 따라서, Object 클래스는 모든 자바 클래스의 최상위 클래스이다!
+		 *   => 즉, 모든 클래스에서 Object 클래스의 멤버에 접근 가능!
+		 * 
+		 * < 상속 기본 문법 - 서브클래스 정의 >
+		 * class 서브클래스명 extends 슈퍼클래스명 {}
+		 */
+		
+		// 서브클래스 Child 인스턴스 생성
+		Child c = new Child();
+		c.childPrn(); 
+		
+		c.name = "홍길동"; // 슈퍼클래스 Parent 에서 선언한 멤버변수
+		c.parentPrn(); // 슈퍼클래스 Parent 에서 정의한 메서드
+		
+		// 슈퍼클래스 Parent 인스턴스 생성
+		Parent p = new Parent();
+		p.name = "이순신";
+		p.parentPrn();
+
+		
+
+		
+
+		// 아버지 클래스의 인스턴스 생성
+		아버지 아버지 = new 아버지();
+
+		System.out.println(아버지.car); // 멤버변수
+		아버지.drawWell(); // 메서드
+
+		System.out.println(아버지.house);
+		아버지.singWell();
+		
+	
+		// 나 클래스의 인스턴스 생성
+		나 나 = new 나();
+		// 서브클래스인 나의 멤버 접근
+		System.out.println(나.pc);
+		나.programmingWell();
+
+
+		System.out.println(나.house); // 할아버지의 멤버변수
+		System.out.println(나.car); // 아버지의 멤버변수
+		나.singWell(); // 할아버지의 메서드
+		나.drawWell(); // 아버지의 메서드
+		
+	}
+
+}
+
+// 슈퍼클래스 Parent 정의
+class Parent { // extends Object 가 생략되어 있음(자동으로 Object 클래스를 상속받음)
+	String name;
+	
+	public void parentPrn() {
+		System.out.println("슈퍼클래스 Parent 의 parentPrn()");
+	}
+	
+}
+
+// 슈퍼클래스 Parent 를 상속받는 서브클래스 Child 정의
+// => 서브클래스명(Child) 뒤에 extends 슈퍼클래스명(Parent) 를 붙여서 상속
+class Child extends Parent {
+
+	public void childPrn() {
+		System.out.println("서브클래스 Child 의 childPrn()");
+	}
+}
+// ---------------------------------------------
+class 할아버지 {
+	String house = "이층집";
+	
+	public void singWell() {
+		System.out.println("노래를 잘 한다!");
+	}
+}
+
+// 아버지 클래스 정의 - 할아버지 클래스로부터 상속
+
+class 아버지 extends 할아버지 {
+	String car = "자동차";
+	
+	public void drawWell() {
+		System.out.println("그림을 잘 그린다!");
+	}
+}
+
+// 아버지 클래스를 상속받는 나 클래스 정의
+// => 슈퍼클래스가 아버지가 될 경우 아버지의 슈퍼클래스인 할아버지의 멤버도 상속됨
+class 나 extends 아버지 {
+	String pc = "컴퓨터";
+	
+	public void programmingWell() {
+		System.out.println("프로그래밍을 잘 한다!");
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
